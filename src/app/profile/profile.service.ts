@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ProfileService {
 
   constructor(private http: HttpClient) { }
-  getResume(): any{
-    return this.http.get('https://gitconnected.com/v1/portfolio/saiteja');
-  }
+  
+  user$ = this.http.get('https://gitconnected.com/v1/portfolio/saiteja');
+  
 }

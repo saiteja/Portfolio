@@ -9,9 +9,8 @@ import { ProfileService } from './profile.service';
 })
 export class ProfileComponent implements OnInit {
   user$ : Observable<any> | undefined;
-  today: number = Date.now();
   constructor(private profileService: ProfileService) { 
-    this.user$ = profileService.getResume();
+    this.user$ = profileService.user$;
   }
 
   ngOnInit(): void {
