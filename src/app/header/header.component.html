@@ -1,17 +1,17 @@
 <header class="w-screen p-3 shadow" *ngIf="user$ | async as me">
     <div class="p-2 w-full mx-auto align-middle flex items-center justify-center text-gray-700">
-        <div class="w-1/5">
+        <div class="md:w-1/5 w-full text-center pl-2">
             <a href=""><h1 class="capitalize text-4xl hover:drop-shadow-lg">{{me.basics.name}}</h1></a>
         </div>
 
-        <nav class="w-3/5 m-auto mr-4 text-center text-lg">
+        <nav class="hidden md:block md:w-3/5 m-auto mr-4 text-center text-lg">
             <a href="#" class="mx-4">Projects</a>
             <a href="#" class="mx-4">Skills</a>
             <a href="#" class="mx-4">Blogs</a>
         </nav>
 
-        <div class="w-1/5 m-auto mr-2">
-            <a href="" class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500">Get In Touch</a>
+        <div class="hidden md:block w-1/5 m-auto md:mr-2">
+            <a href="" class="md:px-4 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500">Get In Touch</a>
         </div>
     </div>
 </header>
