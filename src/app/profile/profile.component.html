@@ -1,52 +1,51 @@
 <ng-container *ngIf="user$ | async as me">
-<section class="grid grid-col-3 gap-4 grid-flow-col p-10" style="height: 500px;">
-    <div class="text-center align-middle m-auto row-span-3 ">
-        <p class="text-xl py-2 font-medium tracking-wider text-gray-400">{{me.basics.label}}</p>
-        <h2 class="text-4xl py-2">{{me.basics.headline}}</h2>
+    <section class="grid grid-col-3 gap-4 grid-flow-col p-10 bg" style="height: 350px;">
+        <div class="text-center align-middle m-auto row-span-3 ">
+            <p class="text-xl py-2 font-medium tracking-wider text-gray-400">{{me.basics.label}}</p>
+            <h2 class="text-4xl py-2">{{me.basics.headline}}</h2>
 
-        <div class="py-2">
-            <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500"
-                href="#">Get In Touch</a>
-        </div>
-    </div>
-    <div class="m-auto align-middle row-span-3">
-        <img src="./../../assets/images/Pebble People - Jump.png" alt="Multi work" />
-    </div>
-</section>
-<section class="m-4 grid grid-cols-4 gap-4">
-    <div class="md:flex bg-gray-100 rounded-xl p-8 md:p-0 max-w-xs" *ngFor="let skill of me.skills">
-        <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-        <blockquote>
-            <p class="text-lg font-semibold text-purple-700">
-                {{skill.name}}
-            </p>
-        </blockquote>
-        <div class="font-medium">
-            <div class="text-cyan-600">
-            {{skill.level}}
-            </div>
-            <p class="text-blue-600">
-                {{skill.yearsOfExperience}} <span class="text-gray-600">Years of Experience </span>  
-            </p>
-            <div class="text-gray-500">
-                <span class="text-gray-600">Rate myself as </span> {{skill.rating}}/5
+            <div class="py-2">
+                <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500"
+                    href="#">Get In Touch</a>
             </div>
         </div>
+        <div class="hidden md:block m-auto align-middle row-span-3">
+            <img src="./../../assets/images/Pebble People - Jump.png" alt="Multi work" />
         </div>
-    </div>
-</section>
-<section class="grid grid-col-3 gap-4 grid-flow-col p-10" style="height: 500px;">
-    <div class="m-auto align-middle row-span-3">
-        <img src="./../../assets/images/Tech Life - Life Management.png" alt="Peaceful" />
-    </div>
-    <div class="text-center align-middle m-auto row-span-3 ">
-        <h2 class="text-lg py-5" *ngFor="let summary of me.basics.summary.split('->')">{{summary}}</h2>
+    </section>
+    <section class="m-4 grid md:grid-cols-4 gap-4 grid-cols-1">
+        <div class="md:flex bg-gray-100 rounded-xl p-8 md:p-0 md:max-w-xs" *ngFor="let skill of me.skills">
+            <div class="pt-2 md:pt-6 md:p-8 text-center md:text-left space-y-4">
+                <blockquote>
+                    <p class="text-lg font-semibold text-purple-700">
+                        {{skill.name}}
+                    </p>
+                </blockquote>
+                <div class="font-medium">
+                    <div class="text-cyan-600">
+                    {{skill.level}}
+                    </div>
+                    <p class="text-blue-600">
+                        {{skill.yearsOfExperience}} <span class="text-gray-600">Years of Experience </span>  
+                    </p>
+                    <div class="text-gray-500">
+                        <span class="text-gray-600">Rate myself as </span> {{skill.rating}}/5
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid grid-col-1 grid-flow-row md:grid-col-3 gap-4 md:grid-flow-col p-10">
+        <div class="m-auto align-middle md:row-span-3">
+            <img src="./../../assets/images/Tech Life - Life Management.png" alt="Peaceful" />
+        </div>
+        <div class="text-center align-middle m-auto md:row-span-3">
+            <h2 class="text-lg py-5" *ngFor="let summary of me.basics.summary.split('->')">{{summary}}</h2>
 
-        <div class="py-2">
-            <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500"
-                href="#">Get In Touch</a>
+            <div class="py-2">
+                <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-400 rounded hover:bg-indigo-500"
+                    href="#">Get In Touch</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 </ng-container>
- 

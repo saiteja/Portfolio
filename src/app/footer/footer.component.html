@@ -1,6 +1,6 @@
 <footer class="bg-gray-100" *ngIf="user$ | async as me">
-    <div class="spy-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
-        <div class="p-5 sm:w-2/12 border-r">
+    <div class="spy-10 px-4 sm:px-6 text-gray-800 flex flex-wrap justify-between mx-auto">
+        <div class="p-5 order-2 md:order-1 w-1/3 md:w-2/12 md:border-r">
             <div class="text-sm uppercase text-indigo-600 font-bold">{{me.basics.name}}</div>
         <ul>
             <li class="my-2">
@@ -14,15 +14,15 @@
             </li>
         </ul>
         </div>
-        <div class="p-5 sm:w-7/12 border-r text-center grid grid-cols-2 gap-4">
-        <div class="m-auto align-middle">
-            <img [src]="me.basics.image" class="shadow-2xl max-h-32 rounded-full" alt="profile image" />
+        <div class="p-5 order-1 md:order-2 w-full md:w-7/12 md:border-r text-center grid grid-cols-2 gap-4">
+        <div class="m-auto md:align-middle">
+            <img [src]="me.basics.image" class="shadow-2xl md:max-h-32 md:rounded-full" alt="profile image" />
         </div>
-        <div class="m-auto align-middle row-span-2">
-            <p class="text-gray-500 mb-10">{{me.basics.summary}}</p>
+        <div class="m-auto align-middle md:bg-gray-100 md:row-span-2">
+            <p class="text-gray-500 mb-4">{{me.basics.summary}}</p>
         </div>
         </div>
-        <div class="p-5 sm:w-3/12">
+        <div class="p-5 order-3 w-2/3 text-center md:w-3/12">
             <div class="text-sm uppercase text-indigo-600 font-bold">Talk to me!</div>
         <ul>
             <li class="my-2">
